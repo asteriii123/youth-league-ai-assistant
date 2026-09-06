@@ -1,3 +1,28 @@
+"""
+聊天会话管理模块。
+
+负责：
+
+1. 创建聊天窗口
+2. 保存聊天历史
+3. 管理用户消息
+4. 连接AI回答
+
+
+作用：
+
+保存用户和AI之间的对话记录。
+
+
+数据：
+
+ChatConversation
+ChatMessage
+
+
+属于AI聊天系统的数据层接口。
+"""
+
 import asyncio
 import json
 from datetime import datetime

@@ -1,4 +1,47 @@
-"""知识库检索：Embedding、混合召回、Rerank 与父块回溯。"""
+"""
+RAG检索核心模块。
+
+负责：
+
+1. Embedding生成
+2. Chroma向量搜索
+3. BM25关键词搜索
+4. RRF融合
+5. Rerank排序
+6. 返回最终知识片段
+
+
+核心流程：
+
+Query
+
+ ↓
+
+Embedding
+
+ ↓
+
+Vector Search
+
++
+
+BM25
+
+ ↓
+
+RRF
+
+ ↓
+
+Rerank
+
+ ↓
+
+Top-K结果
+
+
+这是知识库的大脑。
+"""
 import json
 import hashlib
 import time
@@ -359,3 +402,4 @@ def retrieve_with_rerank(query: str, class_id: int, embedder=None, collection=No
     recalled = hybrid_search(query, class_id, embedder=embedder, collection=collection)
     reranked = rerank_search(query, recalled["rrf"], reranker=reranker)
     return {**recalled, "rerank": reranked, "parents": resolve_parent_chunks(reranked, class_id)}
+

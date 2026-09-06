@@ -1,3 +1,32 @@
+"""
+会议AI Agent任务管理模块。
+
+负责：
+
+1. 创建会议AI任务
+2. 调用LangGraph会议工作流
+3. 管理任务状态
+4. 人工审核转写结果
+5. 人工确认会议纪要
+
+
+流程：
+
+上传会议文件
+    ↓
+MeetingJob
+    ↓
+LangGraph Agent
+    ↓
+Whisper
+    ↓
+DeepSeek总结
+    ↓
+生成会议纪要
+
+
+属于会议自动化核心入口。
+"""
 import json
 from datetime import datetime
 from pathlib import Path

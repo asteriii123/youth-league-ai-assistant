@@ -1,3 +1,26 @@
+"""
+通知管理模块。
+
+负责：
+
+1. 发布通知
+2. 查看通知
+3. 班级通知管理
+
+
+应用场景：
+
+团支书发布：
+
+- 团费通知
+- 会议通知
+- 工作安排
+
+
+未来可以接入：
+
+飞书机器人Agent。
+"""
 from pathlib import Path
 
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile

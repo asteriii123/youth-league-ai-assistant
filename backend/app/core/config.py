@@ -1,3 +1,31 @@
+"""
+项目配置中心。
+
+负责管理：
+
+1. 数据库配置
+2. DeepSeek配置
+3. Embedding模型配置
+4. Rerank模型配置
+5. Whisper配置
+6. RAG参数配置
+
+
+例如：
+
+Embedding模型：
+BAAI/bge-m3
+
+Rerank：
+bge-reranker
+
+
+所有模块通过：
+
+settings.xxx
+
+读取配置。
+"""
 import os
 import secrets
 from dataclasses import dataclass

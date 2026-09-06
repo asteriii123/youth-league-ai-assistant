@@ -1,3 +1,38 @@
+"""
+AI能力接口模块。
+
+负责：
+
+1. 用户AI聊天
+2. RAG增强问答
+3. DeepSeek大模型调用
+4. 学生问题咨询
+5. 会议文字总结
+
+
+核心流程：
+
+用户问题
+    ↓
+是否需要RAG检索
+    ↓
+知识库搜索
+    ↓
+DeepSeek生成答案
+    ↓
+流式返回前端
+
+
+主要依赖：
+
+- DeepSeek LLM
+- RAG Retrieval
+- Prompt模板
+
+对应功能：
+
+团支书AI助手聊天入口。
+"""
 import json
 import os
 import re

@@ -1,3 +1,25 @@
+"""
+项目后端启动入口。
+
+主要功能：
+1. 创建 FastAPI 应用实例
+2. 注册跨域 CORS
+3. 加载数据库初始化逻辑
+4. 注册所有 API 路由
+5. 提供基础健康检查接口
+
+调用关系：
+
+前端 Vue
+    |
+    ↓
+main.py
+    |
+    ↓
+各个 router 接口
+
+这是整个后端服务的入口文件。
+"""
 import os
 from contextlib import asynccontextmanager
 from typing import Literal

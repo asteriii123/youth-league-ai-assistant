@@ -1,3 +1,24 @@
+"""
+安全认证模块。
+
+负责：
+
+1. 用户密码加密
+2. 密码验证
+3. JWT Token生成
+4. 当前用户解析
+5. 权限控制
+
+
+提供：
+
+get_current_user()
+
+require_secretary()
+
+
+保护后台接口。
+"""
 import base64
 import hashlib
 import hmac

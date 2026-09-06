@@ -1,3 +1,31 @@
+"""
+数据库模型定义。
+
+负责：
+
+定义所有数据表。
+
+
+主要表：
+
+User
+用户表
+
+KnowledgeDocument
+知识文档表
+
+KnowledgeChunk
+知识切片表
+
+MeetingRecord
+会议记录表
+
+ChatConversation
+聊天记录表
+
+
+SQLAlchemy ORM模型。
+"""
 from datetime import datetime
 
 from sqlalchemy import Boolean, DateTime, ForeignKey, String, Text, UniqueConstraint

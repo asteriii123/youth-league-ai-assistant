@@ -1,3 +1,34 @@
+"""
+用户认证模块。
+
+负责：
+
+1. 用户注册
+2. 用户登录
+3. JWT Token生成
+4. 当前用户身份获取
+5. 团支书权限验证
+
+
+核心流程：
+
+用户名密码
+    ↓
+密码Hash验证
+    ↓
+生成JWT
+    ↓
+前端保存Token
+    ↓
+访问其他接口
+
+
+用于保护：
+
+- 知识库
+- 会议管理
+- 管理员功能
+"""
 from pydantic import BaseModel, Field
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select

@@ -1,3 +1,14 @@
+"""
+数据库初始化模块。
+
+负责：
+
+1. 创建数据表
+2. 初始化数据库环境
+
+
+项目第一次运行时执行。
+"""
 from sqlalchemy import inspect, select, text
 
 from app.core.database import Base, SessionLocal, engine

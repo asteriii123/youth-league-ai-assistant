@@ -1,3 +1,27 @@
+"""
+RAG检索测试接口。
+
+负责：
+
+1. 接收用户查询
+2. 调用RAG检索系统
+3. 返回相关知识片段
+
+
+主要用途：
+
+开发测试知识库搜索效果。
+
+
+实际聊天场景：
+
+ai.py
+    ↓
+retrieval.py
+
+
+本文件主要用于调试RAG。
+"""
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, Field
 

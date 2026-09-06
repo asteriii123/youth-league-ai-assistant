@@ -1,3 +1,39 @@
+"""
+知识库管理接口。
+
+负责：
+
+1. 上传知识文件
+2. 查看知识资料
+3. 删除知识资料
+4. 重新解析文件
+5. 建立向量索引
+6. 测试RAG搜索
+
+
+支持文件：
+
+- PDF
+- Word
+- PPT
+- TXT
+
+
+流程：
+
+上传文件
+    ↓
+文档解析
+    ↓
+文本切片
+    ↓
+Embedding
+    ↓
+Chroma向量数据库
+
+
+属于RAG知识库入口。
+"""
 from pathlib import Path
 
 from fastapi import APIRouter, BackgroundTasks, Depends, File, HTTPException, UploadFile

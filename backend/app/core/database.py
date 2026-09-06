@@ -1,3 +1,22 @@
+"""
+数据库连接模块。
+
+负责：
+
+1. 创建数据库连接
+2. 创建Session
+3. 提供数据库依赖
+
+
+被所有接口调用：
+
+db: Session = Depends(get_db)
+
+
+当前项目：
+
+SQLAlchemy + SQLite
+"""
 from collections.abc import Generator
 
 from sqlalchemy import create_engine

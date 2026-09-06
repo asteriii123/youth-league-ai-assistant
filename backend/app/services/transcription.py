@@ -1,4 +1,35 @@
-import shutil
+"""
+语音转文字服务。
+
+负责：
+
+1. 加载Whisper模型
+2. 视频提取音频
+3. 音频转文字
+
+
+技术：
+
+faster-whisper
+FFmpeg
+
+
+流程：
+
+mp4/mp3
+
+↓
+
+wav
+
+↓
+
+Whisper
+
+↓
+
+transcript文本
+"""
 import subprocess
 from pathlib import Path
 

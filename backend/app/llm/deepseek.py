@@ -1,3 +1,22 @@
+"""
+大语言模型调用模块。
+
+负责：
+
+1. 初始化DeepSeek客户端
+2. 发送Prompt
+3. 普通生成
+4. 流式生成
+
+
+被：
+
+ai.py
+
+meeting.py
+
+调用。
+"""
 import json
 from typing import Any
 

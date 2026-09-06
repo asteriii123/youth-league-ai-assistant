@@ -1,3 +1,20 @@
+"""
+Prompt模板管理模块。
+
+负责：
+
+集中管理AI系统提示词。
+
+
+例如：
+
+- RAG回答提示词
+- 会议总结提示词
+- Agent角色定义
+
+
+避免Prompt散落在代码中。
+"""
 def rag_system_prompt(role: str, parents: list[dict]) -> str:
     role_prompt = (
         "协助团支书起草通知、整理工作计划、准备会议和解答团务常见问题。"

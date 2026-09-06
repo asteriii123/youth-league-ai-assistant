@@ -1,11 +1,29 @@
-"""知识资料解析与 Small-to-Big 分块。
+"""
+知识文档处理模块。
 
-第六阶段：把 PDF、Word、PPT、TXT 解析为带标题、页码、章节路径的结构化内容，
-再切分为父子块并保存到 SQLite。
+负责：
 
-LibreOffice、Docling、Tesseract 等重依赖在运行时按需导入，缺失时抛出 KnowledgeError
-并给出明确提示，便于在未安装这些依赖的环境中运行测试。电子 PDF 优先使用 Docling，
-未安装或解析失败时自动回退到 PyMuPDF 逐页提取，页码与标题信息仍能保留。
+1. 文件解析
+2. 文本提取
+3. 文档切片
+4. 父子Chunk生成
+5. 创建知识索引
+
+
+流程：
+
+PDF/Word
+ ↓
+文本
+ ↓
+Chunk
+ ↓
+Embedding
+ ↓
+向量库
+
+
+属于RAG数据生产流程。
 """
 import hashlib
 import os

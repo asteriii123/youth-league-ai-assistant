@@ -1,3 +1,32 @@
+"""
+会议记录管理模块。
+
+负责：
+
+1. 音视频转文字
+2. 保存会议记录
+3. 修改会议纪要
+4. 删除会议记录
+5. 生成Word会议文档
+
+
+数据来源：
+
+会议Agent生成结果。
+
+
+流程：
+
+音视频
+ ↓
+Whisper转写
+ ↓
+AI总结
+ ↓
+保存MeetingRecord
+ ↓
+生成docx
+"""
 import json
 
 from fastapi import APIRouter, Depends, File, HTTPException, UploadFile

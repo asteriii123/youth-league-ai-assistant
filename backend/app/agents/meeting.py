@@ -1,3 +1,28 @@
+"""
+会议AI Agent模块。
+
+负责：
+
+使用LangGraph编排会议处理流程。
+
+
+流程：
+
+音视频
+ ↓
+Whisper转写
+ ↓
+文本清洗
+ ↓
+DeepSeek总结
+ ↓
+人工审核
+ ↓
+生成Word
+
+
+属于Agent工作流核心。
+"""
 import asyncio
 import json
 import sqlite3
